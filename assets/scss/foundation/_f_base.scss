@@ -1,0 +1,49 @@
+::-webkit-scrollbar {
+    width: 9px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #333;
+}
+
+html {
+    line-height: 1.6;
+}
+
+body {
+    @extend %fz-16;
+    color: #333;
+    font-family: $f_base;
+    -webkit-font-smoothing: antialiased;
+}
+
+figure img {
+    width: 100%;
+}
+.wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.pc {
+    @extend %pc;
+}
+.sp {
+    @extend %sp;
+}
+
+.nav_link {
+    display: inline-block;
+    transition: 300ms ease-out;
+    @include media_min_query() {
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.item_link {
+    display: inline-block;
+    transition: 300ms ease-out;
+}

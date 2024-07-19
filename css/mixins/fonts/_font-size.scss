@@ -1,0 +1,66 @@
+// open with html 100%
+// $p2r: 0.0625rem;
+
+// open with html 62.5%
+$p2r: 0.1rem;
+
+// sp   : font-size ở SP
+// pc   : font-size ở PC
+// liq  : font-size ở PC nhưng dùng liquid, không cần thêm prop pc:
+$fonts: (
+    "16": (
+        "sp": 14,
+        "pc": 16
+    ),
+    "160": (
+        "sp": 40,
+        "liq": (
+            40,
+            100
+        )
+    )
+);
+// 10 - 12 = 10
+// 14 - 15 = 12
+// 16 - 18 = 14
+// 19 - 22 = 16
+// 23 - 29 = 18
+// 30 - 34 = 20
+// 35 - 39 = 22
+// 40 - 44 = 24
+// 45 - 49 = 26
+// 50 - 60 = 28
+// 61 - 70 = 30
+// 71 - 80 = 32
+// 81 - 90 = 34
+// 91 - 100 = 36
+// 101 - 110 = 38
+// 111 - 120 = 40
+// 121 - 130 = 42
+// 131 - 140 = 44
+// 141 - 160 = 46
+// 161 - 180 = 48
+// 181 - 200 = 50
+// 201 - 220 = 52
+// 221 - 240 = 54
+// 241 - 260 = 56
+// 261 - 280 = 58
+// 281 - 300 = 60
+
+@each $name, $arr in $fonts {
+    %fz-#{ $name } {
+        @each $type, $unit in $arr {
+            @if ($type == "sp") {
+                font-size: $unit * $p2r;
+            } @else if ($type == "pc") {
+                @include media_min_query() {
+                    font-size: $unit * $p2r;
+                }
+            } @else {
+                @include media_min_query() {
+                    font-size: fn-liq(nth($unit, 1), nth($unit, 2));
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+$media_min_query_all: ("sm", "md", "lg", "xl", "xxl");
+$media_min_query: (
+    "sm": "screen and (min-width: 576px), print",
+    "md": "screen and (min-width: 768px), print",
+    "lg": "screen and (min-width: 992px), print",
+    "xl": "screen and (min-width: 1200px), print",
+    "xxl": "screen and (min-width: 1600px), print"
+);
+
+@mixin media_min_query($index: "md") {
+    @media #{map-get($media_min_query, $index)} {
+        @content;
+    }
+}
+
+@function rem($pixel) {
+    @return $pixel * 0.1rem;
+}
+@function clamped($min-px, $max-px, $min-bp, $max-bp) {
+    $slope: math.div($max-px - $min-px, $max-bp - $min-bp);
+    $slope-vw: $slope * 100;
+    $intercept-rems: rem($min-px - $slope * $min-bp);
+    $min-rems: rem($min-px);
+    $max-rems: rem($max-px);
+    @return clamp(#{$min-rems}, #{$slope-vw}vw + #{$intercept-rems}, #{$max-rems});
+}
+@function vw($px, $bp) {
+    $vw: math.div($px, $bp) * 100;
+    @return (#{$vw}vw);
+}

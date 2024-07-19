@@ -1,0 +1,19 @@
+@use "sass:map";
+
+//! global > breakpoint
+
+// -- ▷ Array media for custom devide width
+$media_min_query_all: ("sm", "md", "lg", "xl", "xxl");
+$media_min_query: (
+    "sm": "only screen and (min-width: 576px), print",
+    "md": "only screen and (min-width: 768px), print",
+    "lg": "only screen and (min-width: 992px), print",
+    "xl": "only screen and (min-width: 1200px), print",
+    "xxl": "only screen and (min-width: 1600px), print"
+);
+
+@mixin media_min_query($index: "md") {
+    @media #{map-get($media_min_query, $index)} {
+        @content;
+    }
+}

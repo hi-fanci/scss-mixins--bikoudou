@@ -1,0 +1,27 @@
+$ff: (
+    "barlow": "Barlow, sans-serif",
+    "barlow2": "Barlow Condensed, sans-serif",
+    "bebas": "Bebas Neue, sans-serif",
+    "inter": "Inter, sans-serif",
+    "lato": "Lato, sans-serif",
+    "lora": "Lora, serif",
+    "mont-serrat": "Montserrat, sans-serif",
+    "noto-sans": "Noto Sans JP, sans-serif",
+    "noto-serif": "Noto Serif JP, serif",
+    "nunito": "Nunito Sans, sans-serif",
+    "outfit": "Outfit, sans-serif",
+    "oswald": "Oswald, sans-serif",
+    "poppins": "Poppins, sans-serif",
+    "roboto": "Roboto, sans-serif",
+    "roboto2": "Roboto Condensed, sans-serif",
+    "rubik": "Rubik, sans-serif",
+    "ubuntu": "Ubuntu, sans-serif",
+    "overpass": "Overpass, sans-serif",
+    "ovo": "Ovo, serif"
+);
+
+@each $name, $prop in $ff {
+    %ff-#{$name} {
+        font-family: #{$prop} !important;
+    }
+}

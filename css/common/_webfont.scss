@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+/* --------------------------------
+
+  Webフォント
+
+-------------------------------- */
+
+// webfontを使う場合はデフォルトのfont-weightをreset.scssにて指定
+
+// Google Fonts | Noto Sans JP（日本語ゴシック、源ノ角ゴシックと同じ）
+// https://fonts.google.com/specimen/Noto+Sans+JP
+
+/*
+ * "Noto Sans JP" is lisenced under the SIL Open Font License, 1.1
+ * NotoSansJP-Thin.otf: Copyright 2012 Google Inc. All Rights Reserved.
+ * NotoSansJP-Light.otf: Copyright 2012 Google Inc. All Rights Reserved.
+ * NotoSansJP-Regular.otf: Copyright 2012 Google Inc. All Rights Reserved.
+ * NotoSansJP-Medium.otf: Copyright 2012 Google Inc. All Rights Reserved.
+ * NotoSansJP-Bold.otf: Copyright 2012 Google Inc. All Rights Reserved.
+ * NotoSansJP-Black.otf: Copyright 2012 Google Inc. All Rights Reserved.
+ * https://www.google.com/fonts/attribution
+ * https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+// Google Fonts | Noto Serif JP（日本語明朝体、源ノ明朝と同じ）
+// https://fonts.google.com/specimen/Noto+Serif+JP
+
+/*
+ * "Noto Serif JP" is lisenced under the SIL Open Font License, 1.1
+ * NotoSerifJP-ExtraLight.otf: Copyright 2017 Adobe Systems Incorporated (http://www.adobe.com/).
+ * NotoSerifJP-Light.otf: Copyright 2017 Adobe Systems Incorporated (http://www.adobe.com/).
+ * NotoSerifJP-Regular.otf: Copyright 2017 Adobe Systems Incorporated (http://www.adobe.com/).
+ * NotoSerifJP-Medium.otf: Copyright 2017 Adobe Systems Incorporated (http://www.adobe.com/).
+ * NotoSerifJP-SemiBold.otf: Copyright 2017 Adobe Systems Incorporated (http://www.adobe.com/).
+ * NotoSerifJP-Bold.otf: Copyright 2017 Adobe Systems Incorporated (http://www.adobe.com/).
+ * NotoSerifJP-Black.otf: Copyright 2017 Adobe Systems Incorporated (http://www.adobe.com/).
+ * https://www.google.com/fonts/attribution
+ * https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web
+ */
