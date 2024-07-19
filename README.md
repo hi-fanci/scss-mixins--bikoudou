@@ -64,30 +64,30 @@ xem thêm ở /css/mixins/fonts/font-size.scss
 }
 ```
 
-|         extend | css                                                               |
-| -------------: | ----------------------------------------------------------------- |
-| @extend %fz-14 | font-size: 1.2rem<br>@media min-width (768px) : font-size: 1.4rem |
-| @extend %fz-16 | font-size: 1.4rem<br>@media min-width (768px) : font-size: 1.6rem |
-| @extend %fz-20 | font-size: 1.6rem<br>@media min-width (768px) : font-size: 2rem   |
+|         extend | css                                                              |
+| -------------: | ---------------------------------------------------------------- |
+| @extend %fz-14 | font-size: 1.2rem<br>@media min-width (768px): font-size: 1.4rem |
+| @extend %fz-16 | font-size: 1.4rem<br>@media min-width (768px): font-size: 1.6rem |
+| @extend %fz-20 | font-size: 1.6rem<br>@media min-width (768px): font-size: 2rem   |
 
 bảng hạ font
 
-| size ở PC | size ở SP |     | size ở PC | size ở SP |
-| --------: | --------- | --- | --------- | --------- |
-|     10~12 | 10        |     | 101~110   | 38        |
-|     13~15 | 12        |     | 111~120   | 40        |
-|     16~18 | 14        |     | 121~130   | 42        |
-|     19~22 | 16        |     | 131~140   | 44        |
-|     23~29 | 18        |     | 141~160   | 46        |
-|     30~34 | 20        |     | 161~180   | 48        |
-|     35~39 | 22        |     | 181~200   | 50        |
-|     40~44 | 24        |     | 201~220   | 52        |
-|     45~49 | 26        |     | 221~240   | 54        |
-|     50~60 | 28        |     | 241~260   | 56        |
-|     61~70 | 30        |     | 261~280   | 58        |
-|     71~80 | 32        |     | 281~300   | 60        |
-|     81~90 | 34        |     | 301~350   | 70        |
-|    91~100 | 36        |     | 351~400   | 80        |
+| size ở PC | size ở SP |     |     | size ở PC | size ở SP |
+| --------: | --------- | --- | --- | --------- | --------- |
+|     10~12 | 10        |     |     | 101~110   | 38        |
+|     13~15 | 12        |     |     | 111~120   | 40        |
+|     16~18 | 14        |     |     | 121~130   | 42        |
+|     19~22 | 16        |     |     | 131~140   | 44        |
+|     23~29 | 18        |     |     | 141~160   | 46        |
+|     30~34 | 20        |     |     | 161~180   | 48        |
+|     35~39 | 22        |     |     | 181~200   | 50        |
+|     40~44 | 24        |     |     | 201~220   | 52        |
+|     45~49 | 26        |     |     | 221~240   | 54        |
+|     50~60 | 28        |     |     | 241~260   | 56        |
+|     61~70 | 30        |     |     | 261~280   | 58        |
+|     71~80 | 32        |     |     | 281~300   | 60        |
+|     81~90 | 34        |     |     | 301~350   | 70        |
+|    91~100 | 36        |     |     | 351~400   | 80        |
 
 </details>
 
@@ -97,7 +97,7 @@ xem thêm ở css/mixins/fonts/font-weight.scss
 
 ```css
 .class-name {
-    @extend %fw-[100~900];
+    @extend %fw-[100, 200, ..., 900];
 }
 ```
 
@@ -138,14 +138,13 @@ xem thêm ở css/mixins/text.scss
 }
 ```
 
-|                 extend | css                                           |
-| ---------------------: | --------------------------------------------- |
-|      @extend %txt-left | text-align: left                              |
-|     @extend %txt-right | text-align: right                             |
-|    @extend %txt-center | text-align: center                            |
-|                        |                                               |
-| @extend %md-txt-center | @media min-width (768px) : text-align: center |
-|  @extend %lg-txt-right | @media min-width (992px) : text-align: right  |
+|                 extend | css                                          |
+| ---------------------: | -------------------------------------------- |
+|      @extend %txt-left | text-align: left                             |
+|     @extend %txt-right | text-align: right                            |
+|    @extend %txt-center | text-align: center                           |
+| @extend %md-txt-center | @media min-width (768px): text-align: center |
+|  @extend %lg-txt-right | @media min-width (992px): text-align: right  |
 
 </details>
 
@@ -175,9 +174,9 @@ xem thêm ở css/mixins/text.scss
 }
 ```
 
-|             extend | css                                             |
-| -----------------: | ----------------------------------------------- |
-| @extend %txt-phone | @media min-width (768px) : pointer-events: none |
+|             extend | css                                            |
+| -----------------: | ---------------------------------------------- |
+| @extend %txt-phone | @media min-width (768px): pointer-events: none |
 
 </details>
 
@@ -204,13 +203,13 @@ xem thêm ở /assets/scss/foundation/_f_animate.scss
 <div class="js_ani scaledown">
     <!-- code here -->
 </div>
-<div class="js_ani after_slidebar">
-    <div class="after_slidebar_inside">
+<div class="js_ani slidebar">
+    <div class="slidebar_inside">
         <!-- code here -->
     </div>
 </div>
-<figure class="js_ani after_slidebar">
-    <img class="after_slidebar_inside" src="" alt="" />
+<figure class="js_ani slidebar">
+    <img class="slidebar_inside" src="" alt="" />
 </figure>
 ```
 
